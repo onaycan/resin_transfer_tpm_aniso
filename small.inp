@@ -1,0 +1,97 @@
+**
+**
+**
+** file created by  A N S A  Sun Mar 10 18:21:41 2013
+**
+** output from :
+**
+** /net/linux273/fs1/can/tpm_can_rtm/tpm_iso/Untitled
+**
+**
+** ABAQUS names' user prefix library
+**
+** AMPLITUDE = XY
+** BEAM_SECTION = P
+** COHESIVE_SECTION = P
+** CONNECTOR_DERIVED_COMPONENT = D
+** CONNECTOR_DERIVED_COMPONENT(MatDB) = D
+** CONNECTOR_SECTION = P
+** CONTACT_CLEARANCE = CL
+** CONTACT_PAIR = G
+** CONTINUUM_SHELL_SECTION = P
+** COUPLING = G
+** CUTTING_SURFACE = G
+** DASHPOT_PROP = A
+** FASTENER_PROPERTY = A
+** FILTER = F
+** GAP_PROP = A
+** GASKET_SECTION = P
+** INTERACTION_OUTPUT = I
+** JOINT_PROP = A
+** MATERIAL = 
+** ORIENTATION_C = OR
+** ORIENTATION_NODES_C = OR
+** ORIENTATION_NODES_DYN = OR
+** ORIENTATION_NODES_R = OR
+** ORIENTATION_NODES_S = OR
+** ORIENTATION_OFFSET_TO_NODES = OR
+** ORIENTATION_R = OR
+** ORIENTATION_S = OR
+** SECTION_CONTROL = A
+** SET = S
+** SHELL_SECTION = P
+** SOLID_SECTION = P
+** SPRING_PROP = A
+** SURFACE = G
+** SURFACE_INTERACTION = A
+** SURFACE_SECTION = P
+** TRUSS_PROP = A
+**
+*HEADING
+
+**
+**
+**
+*NODE
+       1,       0,        0,                      0.
+       2,       10,       0,                      0.
+       3,       10,       10,                     0.
+       4,       0,        10,                     0.
+       5,       0,        0,                      10.
+       6,       10,       0,                      10.
+       7,       10,       10,                     10.
+       8,       0,        10,                     10.
+       9,       0,        0,                      20.
+       10,      10,       0,                      20.
+       11,      10,       10,                     20.
+       12,      0,        10,                     20.
+**
+** SOLID ELEMENTS
+**
+*ELEMENT, TYPE=C3D8, ELSET=P2;my_solids
+       1,       1,       2,       3,        4,      5,      6,      7,      8
+       2,       5,       6,       7,        8,      9,      10,      11,      12
+**
+** 
+**
+**
+** 
+**
+**
+** SECTION DATA
+**
+*SOLID SECTION, ELSET=P2;my_solids, MATERIAL=Default MATERIAL
+**
+** MATERIALS
+**
+**
+**Default MATERIAL
+**
+*MATERIAL, NAME=Default MATERIAL
+*DENSITY
+                 7.85E-9,
+*ELASTIC, TYPE=ISOTROPIC
+                 210000.,                      0.3
+**
+** 
+**
